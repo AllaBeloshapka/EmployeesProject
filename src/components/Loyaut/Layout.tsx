@@ -28,7 +28,7 @@ function Layout({ children }: LayoutProps) {
 
         <HeaderNavigation>
           <HeaderNavLink
-            to="/create-employee"
+            to="/create"
             style={resolveActiveNavLinkStyles as any}
           >
             Create Employees

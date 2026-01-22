@@ -8,6 +8,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Button from "../../Button/Button";
 import Input from "../../Input/Input";
+import { v4 } from "uuid";
+
 
 
 
@@ -45,14 +47,14 @@ function Create_Employee() {
     validateOnChange: false,
 
     // Обработчик отправки формы, функция кнопки submit
-  onSubmit: (values, helpers) => {
 
+  onSubmit: (values, helpers) => {
+   const employeeObject = {id: v4(), ... values}
   // Добавляем нового сотрудника в массив сотрудников
-  dispatch(employeeSliceActions.addEmployee(values));
+  dispatch(employeeSliceActions.addEmployee(employeeObject));
 // Сбрасываем форму после отправки
    helpers.resetForm();
 },
-
   });
   return (
     <FormaWrapper onSubmit={formik.handleSubmit}>
