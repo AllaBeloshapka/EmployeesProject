@@ -2,9 +2,9 @@
 
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom"
 import Layout from "./Lessons/Lesson_18/Project_15/Layout"
-import Create_Employee from "./Lessons/Lesson_18/Project_15/Create_Employee/Create_Employee";
-import Employees from "./Lessons/Lesson_18/Project_15/Employees/Employees";
-import GlobalStyles from "styles/GlobalStyles";
+
+import Employees from "./components/Loyaut/Emploeyees/Employees";
+import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return(
